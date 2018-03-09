@@ -4,7 +4,7 @@
 #
 Name     : acrn-devicemodel
 Version  : 0.1.rc2
-Release  : 5
+Release  : 6
 URL      : https://github.com/projectacrn/acrn-devicemodel/archive/v0.1-rc2.tar.gz
 Source0  : https://github.com/projectacrn/acrn-devicemodel/archive/v0.1-rc2.tar.gz
 Summary  : No detailed summary available
@@ -12,6 +12,7 @@ Group    : Development/Tools
 License  : BSD-3-Clause
 Requires: acrn-devicemodel-bin
 Requires: acrn-devicemodel-data
+Requires: acpica-unix2
 BuildRequires : pkgconfig(openssl)
 BuildRequires : pkgconfig(pciaccess)
 BuildRequires : pkgconfig(uuid)
@@ -49,11 +50,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1520603038
+export SOURCE_DATE_EPOCH=1520619139
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1520603038
+export SOURCE_DATE_EPOCH=1520619139
 rm -rf %{buildroot}
 %make_install
 
